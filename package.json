@@ -1,0 +1,30 @@
+{
+  "name": "cyberduino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "less": "node_modules/.bin/lessc css/style.less css/style.css",
+    "build": "npm run less",
+    "watch": "gulp watch",
+    "all": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cyberlane/CyberDuino/"
+  },
+  "author": "Justin Nel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "winreg": "^1.2.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-watch": "^4.3.10",
+    "less": "^2.7.1"
+  }
+}

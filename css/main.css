@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Amatic";
+    src: url("fonts/Amatic-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Amatic";
+    src: url("fonts/AmaticSC-Regular.ttf");
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+body, .blocklyTreeLabel {
+    font-family: "Amatic", "SansSerif";
+}
