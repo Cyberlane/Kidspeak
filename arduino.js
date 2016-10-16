@@ -7,7 +7,7 @@ let arduinoCommand = null;
 
 function getArduinoCommand() {
   if (arduinoCommand !== null) {
-    return arduinoCommand;
+    return '"' + arduinoCommand + '"';
   }
 
   let arduinoCommandGuesses = [];
@@ -24,14 +24,13 @@ function getArduinoCommand() {
       console.log('Found Arduino command at ' + guess);
       arduinoCommand = guess;
     });
-  
-  if (arduinoCommand !== null) {
-    return arduinoCommand;
+
+  if (arduinoCommand === null) {
+    console.log('Could not find Arduino command; hoping it is on the path!');
+    arduinoCommand = "arduino";
   }
 
-  console.log('Could not find Arduino command; hoping it is on the path!');
-  arduinoCommand = "arduino";
-  return arduinoCommand;
+  return '"' + arduinoCommand + '"';
 }
 
 function guessPortName() {
