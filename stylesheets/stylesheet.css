@@ -53,6 +53,14 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
 
+.btn.btn-green {
+  background-color: #4B8511;
+}
+
+.btn.btn-green:hover {
+  background-color: #69A828;
+}
+
 .page-header {
   color: #fff;
   text-align: center;
