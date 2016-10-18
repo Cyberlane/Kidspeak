@@ -95,6 +95,10 @@ a {
   .project-name {
     font-size: 1.75rem; } }
 
+.project-name img {
+  max-width: 100%;
+}
+
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
