@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const Registry = require('winreg');
+const SerialPort = require('serialport');
 
 let arduinoCommand = null;
 
@@ -33,30 +34,26 @@ function getArduinoCommand() {
   return '"' + arduinoCommand + '"';
 }
 
-function guessPortName() {
-  let portName = null;
-  if (/^win/.test(process.platform)) {
-    let key = new Registry({
-      hive: Registry.HKLM,
-      key: '\\HARDWARE\\DEVICEMAP\\SERIALCOMM'
-    });
-    key.values((err, items) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      portName = items[items.length - 1].value;
-    });
-  } else {
-    let list = fs.readdirSync('/dev')
-      .filter(f => f.startsWith('tty.') || f.startsWith('cu.'))
-      .filter(f => f.indexOf('luetooth') === -1)
-      .reverse();
-    let cuList = list.filter(f => f.startsWith('cu.'));
-    portName = '/dev/' + ((cuList.length > 0) ? cuList[0] : list[0]);
-  }
+function guessPortName(res) {
+  SerialPort.list((err, ports) => {
+    if (err) {
+      res(err);
+      return;
+    }
 
-  return portName;
+    let nixFound = ports
+      .filter(p => p.comName.indexOf('luetooth') === -1)
+      .map(p => p.comName)
+      .reverse();
+    
+    if (nixFound.length > 0) {
+      console.info('${nixFound.length} ports found');
+      res(false, nixFound[0]);
+      return;
+    }
+
+    res('No Serial Ports found for Arduino');
+  });
 }
 
 module.exports = {

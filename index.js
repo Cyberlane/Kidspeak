@@ -33,25 +33,34 @@ app.post('/', (req, res) => {
     return;
   }
 
-  const text = req.body;
-  const sketchName = path.join(__dirname + '/upload/upload.ino');
-  fs.writeFileSync(sketchName, text);
-  const arduinoApp = arduino.getArduinoCommand();
-  let compileArgs = [
-    '--upload',
-    '--board',
-    'arduino:avr:nano:cpu=atmega328',
-    '--port',
-    arduino.guessPortName(),
-    sketchName
-  ];
-  const arduinoCommand = arduinoApp + ' ' + compileArgs.join(' ');
-  console.log(arduinoCommand);
-  let uploadResult = exec(arduinoCommand, {stdio: [0, 1, 2]});
-  console.log(uploadResult);
-  res.status(200);
-  res.set('Access-Control-Allow-Origin', '*');
-  res.end();
-})
+  arduino.guessPortName((err, port) => {
+    if (err) {
+      res.status(400);
+      res.send(err);
+      res.end();
+      return;
+    }
+
+    const text = req.body;
+    const sketchName = path.join(__dirname + '/upload/upload.ino');
+    fs.writeFileSync(sketchName, text);
+    const arduinoApp = arduino.getArduinoCommand();
+    let compileArgs = [
+      '--upload',
+      '--board',
+      'arduino:avr:nano:cpu=atmega328',
+      '--port',
+      port,
+      sketchName
+    ];
+    const arduinoCommand = arduinoApp + ' ' + compileArgs.join(' ');
+    console.log(arduinoCommand);
+    let uploadResult = exec(arduinoCommand, { stdio: [0, 1, 2] });
+    console.log(uploadResult);
+    res.status(200);
+    res.set('Access-Control-Allow-Origin', '*');
+    res.end();
+  });
+});
 
 app.listen(8080, () => console.log('Listening to port 8080'));
