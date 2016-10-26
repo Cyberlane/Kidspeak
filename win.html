@@ -17,30 +17,31 @@
     </section>
 
     <section class="main-content">
-
-      <h3>  
-        <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-        Installation
-      </h3>
-
-      <p>Installation is slightly different depending on which operating system you are using, so click the button below for the OS you are using.</p>
-
-      <a href="mac.html" class="btn btn-green">Mac Installation</a>
-      <a href="win.html" class="btn btn-green">Windows Installation</a>
-
       <h3>
-        <a id="about-kidspeak" class="anchor" href="#about-kidspeak" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-        About KidSpeak
-      </h3>
+<a id="win-installation" class="anchor" href="#win-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows Installation.</h3>
 
-<p>KidSpeak was a side track to the LeetSpeak conference, first seen in Malmö, Sweden, 2016.</p>
+<p>The Kidspeak software had a pre-requesite of the `Arduino` IDE, an `I2C OLED` Arduino Library, `NodeJS` and the `Kidspeak software` itself.</p>
 
-<p>The idea behind the project was to try introduce kids to code at an early age by keeping everything simple whilst also retaining an aspect of fun.</p>
+<p>
+  A week before Leetspeak 2016, I discovered <a href="https://github.com/arduino/Arduino/issues/5456">a bug in the Arduino IDE</a>, so on the day of the event I was using an older version which I knew worked.
+</p>
+
+<p>First you need to install <a href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.exe" class="btn btn-green" alt="Arduino 1.6.9">Arduino 1.6.9</a>.</p>
+
+<p>Download the <a href="http://www.rinkydinkelectronics.com/download.php?f=OLED_I2C.zip" class="btn btn-green" alt="OLED I2C">OLED I2C</a> Arduino library and install it.</p>
+
+<p><img src="images/screenshots/arduino-add-library.png" alt="Arduino Add Library" /></p>
+
+<p>If you do not already have <a href="https://nodejs.org" class="btn btn-green" alt="NodeJS">NodeJS</a> installed, download and install the latest stable version.</p>
+
+<p>Finally, you need the <a href="https://github.com/Cyberlane/Kidspeak-2016/zipball/master" class="btn btn-green">Kidspeak software</a>.</p>
+
+<p>After you unzip it, open a Terminal, navigate to the Kidspeak application's folder and run `npm install && npm start` - after it is finished download all the npm packages, it will shortly say it is running on port 8080. Open a web browser to `http://localhost:8080` - please keep in mind that I have mostly tested it on Google Chrome, and although I have seen it run in Safari, I have also noticed some JavaScript related bugs on that browser. So usage on other browsers, I cannot promise will be a bug free experience right now.</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p><a href="https://www.cyber-lane.com/">Justin Nel</a> ( Main developer )</p>
+<p>Justin Nel ( Main developer )</p>
 <p>Magnus Ferm ( UI styling, Swedish translations, Testing )</p>
 <p>Adam Brunette ( Block ideas, Images for OLED, Testing )</p>
 
