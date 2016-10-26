@@ -16,7 +16,12 @@ function getArduinoCommand() {
     arduinoCommandGuesses.push('/Applications/Arduino.app/Contents/MacOS/Arduino');
   }
   else if (/^win/.test(process.platform)) {
-    arduinoCommandGuesses.push('c:\\Program Files\\Arduino\\Arduino.exe', 'c:\\Program Files (x86)\\Arduino\\Arduino.exe');
+    arduinoCommandGuesses.push(
+      'c:\\Program Files\\Arduino\\Arduino.exe',
+      'c:\\Program Files\\Arduino\\Arduino_debug.exe',
+      'c:\\Program Files (x86)\\Arduino\\Arduino.exe',
+      'c:\\Program Files (x86)\\Arduino\\Arduino_debug.exe'
+    );
   }
   
   arduinoCommandGuesses
@@ -25,13 +30,14 @@ function getArduinoCommand() {
       console.log('Found Arduino command at ' + guess);
       arduinoCommand = guess;
     });
-
-  if (arduinoCommand === null) {
-    console.log('Could not find Arduino command; hoping it is on the path!');
-    arduinoCommand = "arduino";
+  
+  if (arduinoCommand !== null) {
+    return '"' + arduinoCommand + '"';
   }
 
-  return '"' + arduinoCommand + '"';
+  console.log('Could not find Arduino command; hoping it is on the path!');
+  arduinoCommand = "arduino";
+  return arduinoCommand;
 }
 
 function guessPortName(res) {
