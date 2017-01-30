@@ -6,7 +6,7 @@ const SerialPort = require('serialport');
 
 let arduinoCommand = null;
 
-function getArduinoCommand() {
+const getArduinoCommand = () => {
   if (arduinoCommand !== null) {
     return '"' + arduinoCommand + '"';
   }
@@ -38,9 +38,9 @@ function getArduinoCommand() {
   console.log('Could not find Arduino command; hoping it is on the path!');
   arduinoCommand = "arduino";
   return arduinoCommand;
-}
+};
 
-function guessPortName(res) {
+const guessPortName = (res) => {
   SerialPort.list((err, ports) => {
     if (err) {
       res(err);
@@ -60,9 +60,7 @@ function guessPortName(res) {
 
     res('No Serial Ports found for Arduino');
   });
-}
+};
 
-module.exports = {
-  getArduinoCommand: getArduinoCommand,
-  guessPortName: guessPortName
-}
+exports.arduinoCommand = arduinoCommand;
+exports.guessPortName = guessPortName;

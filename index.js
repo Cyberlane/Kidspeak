@@ -6,7 +6,6 @@ const fs = require('fs');
 const exec = require('child_process').execSync;
 const arduino = require('./arduino');
 
-
 const server = express();
 const loaded = {
   window: false,
@@ -46,7 +45,6 @@ app.on('activate', () => {
 })
 
 server.use(bodyParser.text());
-// server.use('/blockly', express.static('../blockly'));
 server.use('/media', express.static('./media'));
 server.use('/css', express.static('css'));
 server.use('/js', express.static('js'));
