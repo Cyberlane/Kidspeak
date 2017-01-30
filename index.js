@@ -1,5 +1,4 @@
-'use strict';
-
+const { app, BrowserWindow } = require('electron');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -7,27 +6,64 @@ const fs = require('fs');
 const exec = require('child_process').execSync;
 const arduino = require('./arduino');
 
-const app = express();
 
-app.use(bodyParser.text());
-app.use('/blockly', express.static('../blockly'));
-app.use('/media', express.static('../blockly/media'));
-app.use('/css', express.static('css'));
-app.use('/js', express.static('js'));
-app.use('/assets', express.static('assets'));
+const server = express();
+const loaded = {
+  window: false,
+  server: false,
+};
+let win;
 
-app.head('/', (req, res) => {
+const createWindow = () => {
+  win = new BrowserWindow({ width: 800, height: 600 });
+  win.maximize();
+};
+
+const loadWindow = () => win.loadURL('http://localhost:8080');
+
+app.on('ready', () => {
+  createWindow();
+  loaded.window = true;
+  if (loaded.server) {
+    loadWindow();
+  }
+});
+
+app.on('closed', () => {
+  win = null;
+});
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+});
+
+app.on('activate', () => {
+  if (win === null) {
+    createWindow();
+  }
+})
+
+server.use(bodyParser.text());
+// server.use('/blockly', express.static('../blockly'));
+server.use('/media', express.static('./media'));
+server.use('/css', express.static('css'));
+server.use('/js', express.static('js'));
+server.use('/assets', express.static('assets'));
+
+server.head('/', (req, res) => {
   res.status(200);
   res.set('content-type', 'text/html;charset=utf-8');
   res.set('Access-Control-Allow-Origin', '*');
   res.end();
 });
 
-app.get('/', (req, res) => {
+server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/views/index.html'));
 });
 
-app.post('/', (req, res) => {
+server.post('/', (req, res) => {
   if (req.get('Content-Length') == 0) {
     res.status(400);
     res.end();
@@ -64,4 +100,9 @@ app.post('/', (req, res) => {
   });
 });
 
-app.listen(8080, () => console.log('Listening to port 8080'));
+server.listen(8080, () => {
+  loaded.server = true;
+  if (loaded.window) {
+    loadWindow();
+  }
+});
