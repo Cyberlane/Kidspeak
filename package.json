@@ -1,18 +1,19 @@
 {
-  "name": "cyberduino",
+  "name": "kidspeak",
   "version": "1.0.0",
-  "description": "",
+  "description": "KidSpeak block programming app",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "less": "node_modules/.bin/lessc css/style.less css/style.css",
     "build": "npm run less",
     "watch": "gulp watch",
-    "all": "npm run build && npm run start"
+    "all": "npm run build && npm run start",
+    "pack:all": "build -wml"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Cyberlane/CyberDuino/"
+    "url": "https://github.com/Cyberlane/Kidspeak-2016/"
   },
   "author": "Justin Nel",
   "license": "ISC",
