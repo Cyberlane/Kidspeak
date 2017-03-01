@@ -7,10 +7,10 @@ const arduino = require('./arduino');
 const server = express();
 
 const staticContent = () => {
-  server.use('/media', express.static('./media'));
-  server.use('/css', express.static('./css'));
-  server.use('/js', express.static('./js'));
-  server.use('/assets', express.static('./assets'));
+  server.use('/media', express.static(path.join(__dirname, 'media')));
+  server.use('/css', express.static(path.join(__dirname, 'css')));
+  server.use('/js', express.static(path.join(__dirname, 'js')));
+  server.use('/assets', express.static(path.join(__dirname, 'assets')));
 };
 
 const head = () => {
