@@ -1,6 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, shell, BrowserWindow } = require('electron');
 const log = require('electron-log');
 const { autoUpdater } = require('electron-updater');
+const notification = require('electron-notifications');
 
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
@@ -10,36 +11,32 @@ let win;
 
 const sendStatusToWindow = (text) => {
   log.info(text);
-  win.webContents.send('message', text);
 };
 
-autoUpdater.on('checking-for-update', () => {
-  sendStatusToWindow('Checking for update...');
-})
-autoUpdater.on('update-available', (ev, info) => {
-  sendStatusToWindow('Update available.');
-})
-autoUpdater.on('update-not-available', (ev, info) => {
-  sendStatusToWindow('Update not available.');
-})
-autoUpdater.on('error', (ev, err) => {
-  sendStatusToWindow('Error in auto-updater.');
-})
-autoUpdater.on('download-progress', (ev, progressObj) => {
-  sendStatusToWindow('Download progress...');
-})
-autoUpdater.on('update-downloaded', (ev, info) => {
-  sendStatusToWindow('Update downloaded; will install in 5 seconds');
-  // Wait 5 seconds, then quit and install
-  // In your application, you don't need to wait 5 seconds.
-  // You could call autoUpdater.quitAndInstall(); immediately
-  setTimeout(function () {
-    autoUpdater.quitAndInstall();
-  }, 5000)
-});
+autoUpdater
+  .on('checking-for-update', () => {
+    log.info('Checking for update...');
+  })
+  .on('update-available', (ev, info) => {
+    sendStatusToWindow('Update available.');
+    const note = notification.notify('Update Available!', {
+      buttons: ['Ignore', 'Download'],
+      url: 'https://cyberlane.github.io/Kidspeak-2016/'
+    });
+    note.on('buttonClicked', (text, buttonIndex, options) => {
+      if (text === 'Download') {
+        shell.openExternal(options.url);
+      }
+      notification.close()
+    });
+  })
+  .on('error', (ev, err) => {
+    log.info('Error in auto-updater.');
+  });
 
 const ready = (createWindow, loadWindow, loaded) => {
   app.on('ready', () => {
+    autoUpdater.autoDownload = false;
     autoUpdater.checkForUpdates();
     createWindow();
     loaded.window = true;
@@ -57,9 +54,8 @@ const closed = (setup) => {
 
 const windowAllClosed = () => {
   app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-      app.quit();
-    }
+    log.info('App closing...')
+    app.quit();
   });
 };
 

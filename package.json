@@ -1,6 +1,6 @@
 {
   "name": "kidspeak",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "KidSpeak block programming app",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "watch": "gulp watch",
     "all": "npm run build && npm run start",
     "postinstall": "install-app-deps",
-    "pack:mac": "build -m -p always",
+    "pack:mac": "build -m",
     "pack:linux": "build -l -p always",
     "pack:win": "build -w -p always",
     "pack:all": "build -wml -p always"
@@ -24,6 +24,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "electron-log": "^1.3.0",
+    "electron-notifications": "^1.0.0",
     "electron-updater": "^1.8.1",
     "express": "^4.14.0",
     "serialport": "^4.0.3",
