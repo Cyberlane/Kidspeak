@@ -10,9 +10,9 @@
     "watch": "gulp watch",
     "all": "npm run build && npm run start",
     "postinstall": "install-app-deps",
-    "pack:mac": "build -m",
+    "pack:mac": "build -m -p always",
     "pack:linux": "build -l -p always",
-    "pack:win": "build -w -p always",
+    "pack:win": "build -w",
     "pack:all": "build -wml -p always"
   },
   "repository": {
