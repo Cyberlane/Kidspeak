@@ -1,6 +1,6 @@
 {
   "name": "kidspeak",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "KidSpeak block programming app",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "electron-notifications": "^1.0.0",
     "electron-updater": "^1.8.1",
     "express": "^4.14.0",
+    "portfinder": "^1.0.13",
     "serialport": "^4.0.3",
     "winreg": "^1.2.2"
   },

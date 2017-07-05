@@ -1,15 +1,20 @@
+const portFinder = require('portfinder');
 const { app, BrowserWindow } = require('electron');
 const { configureApp } = require('./app-config');
 const { serverConfig } = require('./server-config');
 
-const loaded = {
-  window: false,
-  server: false,
-};
-const setup = {
-  win: null,
-  port: 8080,
-};
+portFinder.getPortPromise()
+  .then((port) => {
+    const loaded = {
+      window: false,
+      server: false,
+    };
 
-configureApp(setup, loaded);
-serverConfig(setup, loaded);
+    const setup = {
+      win: null,
+      port,
+    };
+
+    configureApp(setup, loaded);
+    serverConfig(setup, loaded);
+  });
