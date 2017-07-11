@@ -1,5 +1,7 @@
 .DS_Store
 *.lock
+*.swp
+.jekyll-metadata
 _site/
 node_modules/
 dist/

@@ -1,42 +1,7 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Kidspeak 2016 by Cyberlane</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="Kidspeak 2016"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name"><img src="images/Kidspeak_logo.png" alt="Kidspeak 2016" /></h1>
-      <a href="https://github.com/Cyberlane/Kidspeak-2016" class="btn">View on GitHub</a>
-      <a href="https://github.com/Cyberlane/Kidspeak-2016/releases/download/v1.2.0/kidspeak-Setup-1.2.0.exe" class="btn">Download .exe</a>
-    </section>
-
-    <section class="main-content">
+---
+layout: default
+title: Kidspeak 2016 by Cyberlane
+---
       <h3>
 <a id="win-installation" class="anchor" href="#win-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows Installation.</h3>
 
@@ -48,36 +13,10 @@
 
 <p>First you need to install <a href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.9-windows.exe" class="btn btn-green" alt="Arduino 1.6.9">Arduino 1.6.9</a>.</p>
 
+<p>Next you will need <a href="https://github.com/Cyberlane/CH340/files/1140286/CH34x_Install_Windows_v3_4.zip" class="btn btn-green" alt="Winchiphead drivers">Winchiphead signed drivers for CH340-CH341</a>.</p>
+
 <p>Download the <a href="http://www.rinkydinkelectronics.com/download.php?f=OLED_I2C.zip" class="btn btn-green" alt="OLED I2C">OLED I2C</a> Arduino library and install it.</p>
 
 <p><img src="images/screenshots/arduino-add-library.png" alt="Arduino Add Library" /></p>
 
-<p>If you do not already have <a href="https://nodejs.org" class="btn btn-green" alt="NodeJS">NodeJS</a> installed, download and install the latest stable version.</p>
-
-<p>Finally, you need the <a href="https://github.com/Cyberlane/Kidspeak-2016/releases/download/v1.2.0/kidspeak-Setup-1.2.0.exe" class="btn btn-green">Kidspeak software</a>.</p>
-
-<p>After you unzip it, open a Terminal, navigate to the Kidspeak application's folder and run `npm install && npm start` - after it is finished download all the npm packages, it will shortly say it is running on port 8080. Open a web browser to `http://localhost:8080` - please keep in mind that I have mostly tested it on Google Chrome, and although I have seen it run in Safari, I have also noticed some JavaScript related bugs on that browser. So usage on other browsers, I cannot promise will be a bug free experience right now.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>Justin Nel ( Main developer )</p>
-<p>Magnus Ferm ( UI styling, Swedish translations, Testing )</p>
-<p>Adam Brunette ( Block ideas, Images for OLED, Testing )</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with the Kidspeak hardware or software? A detailed wiki page will be made in the future, but for now feel free to <a href="https://github.com/Cyberlane/Kidspeak-2016/issues" alt="GitHub issues">open an issue on GitHub</a> and I will help you sort it out.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/Cyberlane/Kidspeak-2016">Kidspeak 2016</a> is maintained by <a href="https://github.com/Cyberlane">Justin Nel</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
-</html>
+<p>Finally, you need the <a href="https://github.com/Cyberlane/Kidspeak-2016/releases/download/v1.2.1/kidspeak-Setup-1.2.1.exe" class="btn btn-green">Kidspeak software</a>.</p>
