@@ -26,7 +26,7 @@ const getArduinoCommand = () => {
       path.join(programFiles, 'Arduino', 'Arduino.exe'),
       path.join(programFiles, 'Arduino', 'Arduino_debug.exe'),
       path.join(programFiles86, 'Arduino', 'Arduino.exe'),
-      path.join(programFiles86, 'Arduino', 'Arduino_debug.exe'),
+      path.join(programFiles86, 'Arduino', 'Arduino_debug.exe')
     );
   }
 
