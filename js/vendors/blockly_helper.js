@@ -201,7 +201,12 @@ function uploadCode(code, callback) {
     var target = document.getElementById('content_arduino');
     var spinner = new Spinner().spin(target);
 
-    var url = "http://localhost:8080/";
+    var port = null;
+    if (Boolean(window.location.port)) {
+      port = ':' + window.location.port;
+    }
+
+    var url = "http://localhost" + port + "/";
     var method = "POST";
 
     // You REALLY want async = true.
@@ -209,14 +214,14 @@ function uploadCode(code, callback) {
     var async = true;
 
     var request = new XMLHttpRequest();
-    
+
     request.onreadystatechange = function() {
-        if (request.readyState != 4) { 
-            return; 
+        if (request.readyState != 4) {
+            return;
         }
-        
+
         spinner.stop();
-        
+
         var status = parseInt(request.status); // HTTP response status, e.g., 200 for "200 OK"
         var errorInfo = null;
         switch (status) {
@@ -238,13 +243,13 @@ function uploadCode(code, callback) {
             errorInfo = "code " + status + "\n\nUnknown error.";
             break;
         };
-        
+
         callback(status, errorInfo);
     };
 
     request.open(method, url, async);
     request.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-    request.send(code);	     
+    request.send(code);
 }
 
 function uploadClick() {
@@ -256,6 +261,7 @@ function uploadClick() {
             notify.success('Upload successful!');
         } else {
             notify.error('Upload failed...');
+            notify.error(errorInfo);
         }
     });
 }

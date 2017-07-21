@@ -33,7 +33,7 @@ const getArduinoCommand = () => {
   arduinoCommandGuesses
     .filter(guess => fs.existsSync(guess))
     .forEach(guess => {
-      console.log('Found Arduino command at ' + guess);
+      console.log(`Found Arduino command at ${guess}`);
       arduinoCommand = guess;
     });
 
@@ -59,7 +59,7 @@ const guessPortName = (res) => {
       .reverse();
 
     if (nixFound.length > 0) {
-      console.info('${nixFound.length} ports found');
+      console.info(`${nixFound.length} ports found`);
       res(false, nixFound[0]);
       return;
     }
@@ -68,5 +68,7 @@ const guessPortName = (res) => {
   });
 };
 
-exports.arduinoCommand = arduinoCommand;
-exports.guessPortName = guessPortName;
+module.exports = {
+  getArduinoCommand,
+  guessPortName
+};

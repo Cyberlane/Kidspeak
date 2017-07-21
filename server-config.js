@@ -28,7 +28,7 @@ const get = () => {
   });
 };
 
-const uploadToArduino = (text) => {
+const uploadToArduino = (port, text) => {
   const sketchName = path.join(__dirname + '/upload/upload.ino');
   fs.writeFileSync(sketchName, text);
   const arduinoApp = arduino.getArduinoCommand();
@@ -48,6 +48,7 @@ const uploadToArduino = (text) => {
 
 const post = () => {
   server.post('/', (req, res) => {
+    console.log('uploading attempt');
     if (req.get('Content-Length') == 0) {
       res.status(400);
       res.end();
@@ -63,7 +64,7 @@ const post = () => {
       }
 
       const text = req.body;
-      uploadToArduino(text);
+      uploadToArduino(port, text);
       res.status(200);
       res.set('Access-Control-Allow-Origin', '*');
       res.end();

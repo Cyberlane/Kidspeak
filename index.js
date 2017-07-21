@@ -5,6 +5,7 @@ const { serverConfig } = require('./server-config');
 
 portFinder.getPortPromise()
   .then((port) => {
+    console.log(port);
     const loaded = {
       window: false,
       server: false,
