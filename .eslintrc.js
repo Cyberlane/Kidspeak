@@ -1,7 +1,6 @@
 module.exports = {
-  extends: 'airbnb',
-  parser: 'babel-eslint',
-  plugins: [
-    'import'
-  ],
+    "extends": "airbnb-base",
+    "plugins": [
+        "import"
+    ]
 };
