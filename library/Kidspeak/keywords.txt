@@ -1,0 +1,14 @@
+Kidspeak KEYWORD1
+
+rgb_set_color KEYWORD2
+play_tune_mario KEYWORD2
+play_tune_complete KEYWORD2
+play_tune_ducktales KEYWORD2
+play_tune_felix KEYWORD2
+play_tune_heman KEYWORD2
+play_tune_kirby KEYWORD2
+play_tune_morning KEYWORD2
+play_tune_pony KEYWORD2
+play_tune_reindeer KEYWORD2
+play_tune_simpsons KEYWORD2
+play_tune_smurfs KEYWORD2
