@@ -28,7 +28,9 @@
     "electron-notifications": "^1.0.0",
     "electron-updater": "^1.16.0",
     "express": "^4.15.3",
+    "ncp": "^2.0.0",
     "portfinder": "^1.0.13",
+    "rimraf": "^2.6.1",
     "serialport": "^4.0.7",
     "winreg": "^1.2.2"
   },
