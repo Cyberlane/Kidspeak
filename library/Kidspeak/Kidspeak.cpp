@@ -11,6 +11,7 @@
 #define vel 20000l;
 
 OLED myOLED(SDA, SCL, 8);
+extern uint8_t SmallFont[];
 
 Kidspeak::Kidspeak(void)
 {
@@ -18,7 +19,15 @@ Kidspeak::Kidspeak(void)
 
 void Kidspeak::init(void)
 {
+  myOLED.setFont(SmallFont);
   myOLED.begin();
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
 }
 
 void Kidspeak::rgb_set_color(uint8_t redPin, uint8_t greenPin, uint8_t bluePin, uint8_t red, uint8_t green, uint8_t blue)

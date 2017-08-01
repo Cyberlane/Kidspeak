@@ -63,6 +63,11 @@ class Kidspeak
     void play_tune_reindeer(void);
     void play_tune_simpsons(void);
     void play_tune_smurfs(void);
+    void draw_invert(void);
+    void draw_update(void);
+    void draw invert(bool mode);
+    void draw_text(char *st, int x, int y);
+    void draw_text(String st, int x, int y);
     void draw_baby_groot(void);
     void draw_bat(void);
     void draw_boo(void);
