@@ -71,7 +71,6 @@ var notify = (function(){
         var options = extend(DefaultOptions, userOptions);
         options.text = text;
 
-        console.log('Notify: ', type, text, options);
         switch(type){
             case Type.notify:
                 vNotify.notify(options);
@@ -91,7 +90,6 @@ var notify = (function(){
                 break;
             case Type.unknown:
             default:
-                console.error('BAJS!');
                 break;
         }
     }
