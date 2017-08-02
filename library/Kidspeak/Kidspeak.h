@@ -63,24 +63,23 @@ class Kidspeak
     void play_tune_reindeer(void);
     void play_tune_simpsons(void);
     void play_tune_smurfs(void);
-    void draw_invert(void);
     void draw_update(void);
-    void draw invert(bool mode);
+    void draw_invert(bool mode);
     void draw_text(char *st, int x, int y);
     void draw_text(String st, int x, int y);
-    void draw_baby_groot(void);
-    void draw_bat(void);
-    void draw_boo(void);
-    void draw_emblem(void);
-    void draw_ghostbuster(void);
-    void draw_jackolantern(void);
-    void draw_kidspeak(void);
-    void draw_mickey(void);
-    void draw_mushroom(void);
-    void draw_oogie(void);
-    void draw_pokeball(void);
-    void draw_triforce(void);
-    void draw_yoshi(void);
+    void draw_baby_groot(uint8_t x, uint8_t y);
+    void draw_bat(uint8_t x, uint8_t y);
+    void draw_boo(uint8_t x, uint8_t y);
+    void draw_tretton37(uint8_t x, uint8_t y);
+    void draw_ghostbusters(uint8_t x, uint8_t y);
+    void draw_jackolantern(uint8_t x, uint8_t y);
+    void draw_kidspeak(uint8_t x, uint8_t y);
+    void draw_mickey(uint8_t x, uint8_t y);
+    void draw_mushroom(uint8_t x, uint8_t y);
+    void draw_oogie(uint8_t x, uint8_t y);
+    void draw_pokeball(uint8_t x, uint8_t y);
+    void draw_triforce(uint8_t x, uint8_t y);
+    void draw_yoshi(uint8_t x, uint8_t y);
 
   protected:
     void _play_byte(uint8_t pByte);
