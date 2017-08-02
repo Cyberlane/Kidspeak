@@ -25,7 +25,7 @@ const installLibrary = libraryPath =>
       .then(() => {
         const source = path.join(__dirname, '../', '../', 'library/');
         log.info('Installing latest Kidspeak Arduino Library');
-        ncp(source, destination, (err) => {
+        ncp(source, libraryPath, (err) => {
           if (err) {
             log.error(err);
             reject('There was a problem installing the Kidspeak Arduino Library');
