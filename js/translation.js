@@ -85,7 +85,6 @@ var translation = (function () {
   }
 
   function setCustomTranslation() {
-    console.log(Blockly.Msg);
     var table = [
       // Tab bar
       {id: "tab_blocks", key: Blockly.Msg.CUSTOM_BLOCKS},
@@ -119,8 +118,6 @@ var translation = (function () {
       var element = document.getElementById(t.id);
       if (element) {
         element.innerHTML = t.key;
-      } else {
-        console.log('Cannot find: ', t.id);
       }
     });
   }

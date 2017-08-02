@@ -323,12 +323,10 @@ function bind() {
   $('#textarea_import').val("");
 
   var currentLang = getStringParamFromUrl('lang', 'en');
-  console.log(currentLang);
   $('#languageSelect')
     .val(currentLang)
     .on('change', function () {
       var lang = $(this).val();
-      console.log('change language to', lang);
       translation.changeLanguage(lang);
     })
     .msDropdown();
