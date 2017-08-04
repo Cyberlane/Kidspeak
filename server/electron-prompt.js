@@ -4,8 +4,10 @@ import { BrowserWindow, ipcMain } from 'electron';
 let promptResponse = null;
 ipcMain.on('prompt', (eventRet, args) => {
   promptResponse = null;
+  const widthDialog = (length) => length * 9;
   const promptWindow = new BrowserWindow({
-    width: 200,
+    minWidth: 150,
+    width: widthDialog(args.title.length),
     height: 100,
     show: false,
     resizable: false,
@@ -14,6 +16,7 @@ ipcMain.on('prompt', (eventRet, args) => {
     frame: false,
   });
   const value = args.value || '';
+
   const html = `
     <label for="val">${args.title}</label>
     <input id="val" value="${value}" autofocus />
