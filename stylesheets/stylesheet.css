@@ -36,7 +36,14 @@ a {
 
 @media screen and (min-width: 64em) {
   .btn {
-    padding: 0.75rem 1rem; } }
+    padding: 0.75rem 1rem; }
+  .main-content .btn {
+    padding: 0.1rem 0.5rem;
+  }
+  .main-content .install-links .btn {
+    padding: 0.75rem 1rem;
+  }
+}
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .btn {
