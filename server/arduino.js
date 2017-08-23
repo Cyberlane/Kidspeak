@@ -57,6 +57,23 @@ const getCommand = () =>
     reject(`Invalid platform: ${process.platform}`);
   });
 
+const getPid = ({ productId, pnpId }) => {
+  if (productId) {
+    return productId;
+  }
+  if (pnpId) {
+    try {
+      return '0x' + /PID_\d*/.exec(pnpId)[0].substr(4);
+    }
+    catch (err) {
+      return null;
+    }
+  }
+  return null;
+};
+
+const nanoPidList = ['0x6001', '0x7523'].map(nano => parseInt(nano, 16));
+
 const getPortName = () =>
   new Promise((resolve, reject) => {
     SerialPort.list((err, ports) => {
@@ -65,9 +82,12 @@ const getPortName = () =>
         reject(err);
         return;
       }
-
       const [port] = ports
-        .filter(p => p.comName.indexOf('luetooth') === -1)
+        .filter(p => {
+          const pid = getPid(p);
+          if (pid === null) return false;
+          nanoPidList.indexOf(parseInt(pid, 16)) !== -1;
+        })
         .map(p => p.comName)
         .reverse();
 
