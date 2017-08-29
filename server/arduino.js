@@ -86,7 +86,7 @@ const getPortName = () =>
         .filter(p => {
           const pid = getPid(p);
           if (pid === null) return false;
-          nanoPidList.indexOf(parseInt(pid, 16)) !== -1;
+          return nanoPidList.indexOf(parseInt(pid, 16)) !== -1;
         })
         .map(p => p.comName)
         .reverse();
@@ -97,7 +97,7 @@ const getPortName = () =>
         return;
       }
 
-      reject();
+      reject('Could not find a connected Arduino');
     });
   });
 
