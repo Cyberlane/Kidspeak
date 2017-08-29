@@ -100,6 +100,11 @@ void Kidspeak::play_tune_smurfs(void)
   play_tune(tune_smurfs);
 }
 
+void Kidspeak::draw_clear(void)
+{
+  myOLED.clrScr();
+}
+
 void Kidspeak::draw_update(void)
 {
   myOLED.update();

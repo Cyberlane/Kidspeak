@@ -63,6 +63,7 @@ class Kidspeak
     void play_tune_reindeer(void);
     void play_tune_simpsons(void);
     void play_tune_smurfs(void);
+    void draw_clear(void);
     void draw_update(void);
     void draw_invert(bool mode);
     void draw_text(char *st, int x, int y);
