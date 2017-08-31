@@ -6,9 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development electron -r babel-register .",
     "less": "node_modules/.bin/lessc css/style.less css/style.css",
-    "build": "npm run less",
-    "watch": "gulp watch",
-    "all": "npm run build && npm run start",
+    "watch": "cross-env NODE_ENV=development electron -r babel-register . -watch",
     "pack:mac": "build -m -p always",
     "pack:linux": "build -l -p always",
     "pack:win": "build -w -p always",
