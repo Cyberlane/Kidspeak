@@ -127,67 +127,67 @@ void Kidspeak::draw_text(String st, int x, int y)
 
 void Kidspeak::draw_baby_groot(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, Baby_Groot_Black, 35, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)Baby_Groot_Black, 35, 64);
 }
 
 void Kidspeak::draw_bat(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, Bat, 109, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)Bat, 109, 64);
 }
 
 void Kidspeak::draw_boo(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, boo, 70, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)boo, 70, 64);
 }
 
 void Kidspeak::draw_tretton37(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, tretton37, 64, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)tretton37, 64, 64);
 }
 
 void Kidspeak::draw_ghostbusters(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, Ghostbusters, 75, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)Ghostbusters, 75, 64);
 }
 
 void Kidspeak::draw_jackolantern(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, JackoLantern, 74, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)JackoLantern, 74, 64);
 }
 
 void Kidspeak::draw_kidspeak(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, kidspeak, 128, 52);
+  myOLED.drawBitmap(x, y, (uint8_t*)kidspeak, 128, 52);
 }
 
 void Kidspeak::draw_mickey(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, Mickey_and_Minnie_Kissing, 98, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)Mickey_and_Minnie_Kissing, 98, 64);
 }
 
 void Kidspeak::draw_mushroom(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, mushroom, 64, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)mushroom, 64, 64);
 }
 
 void Kidspeak::draw_oogie(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, Oogie_Boogie, 64, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)Oogie_Boogie, 64, 64);
 }
 
 void Kidspeak::draw_pokeball(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, Pokeball, 63, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)Pokeball, 63, 64);
 }
 
 void Kidspeak::draw_triforce(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, triforce, 101, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)triforce, 101, 64);
 }
 
 void Kidspeak::draw_yoshi(uint8_t x, uint8_t y)
 {
-  myOLED.drawBitmap(x, y, yoshi, 117, 64);
+  myOLED.drawBitmap(x, y, (uint8_t*)yoshi, 117, 64);
 }
 
 void Kidspeak::_play_byte(uint8_t pByte)
