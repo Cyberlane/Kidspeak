@@ -75,16 +75,13 @@
       },
       "electronPackagerConfig": {},
       "electronWinstallerConfig": {
-        "name": ""
+        "name": "Kidspeak"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
       "github_repository": {
         "owner": "Cyberlane",
         "name": "Kidspeak-2016"
-      },
-      "windowsStoreConfig": {
-        "packageName": ""
       }
     }
   }
