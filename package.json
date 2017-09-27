@@ -60,6 +60,7 @@
   },
   "build": {
     "appId": "com.electron.kidspeak",
+    "electronCompile": true,
     "publish": [
       "github"
     ],
