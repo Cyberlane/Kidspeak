@@ -1,0 +1,9 @@
+{
+  "application/javascript": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "compact": true
+  }
+}
