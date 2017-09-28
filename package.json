@@ -19,7 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "electron-forge": "^4.1.2",
+    "electron-compile": "^6.4.2",
     "electron-log": "^2.2.7",
     "electron-notifications": "^1.0.0",
     "electron-squirrel-startup": "^1.0.0",
@@ -41,8 +41,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.0.1",
-    "electron-compile": "^6.4.2",
-    "electron-compilers": "^5.9.0",
+    "electron-forge": "^4.1.2",
     "electron-prebuilt-compile": "1.7.8",
     "electron-rebuild": "^1.5.11",
     "eslint": "^3.19.0",
