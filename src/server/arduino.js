@@ -45,12 +45,13 @@ const getCommand = () =>
     } else if (/^win/.test(process.platform)) {
       const programFiles = process.env.ProgramFiles;
       const programFiles86 = process.env['ProgramFiles(x86)'];
-      resolveFirstValid([
+      const paths = [
         path.join(programFiles, 'Arduino', 'Arduino_debug.exe'),
         path.join(programFiles, 'Arduino', 'Arduino.exe'),
         path.join(programFiles86, 'Arduino', 'Arduino_debug.exe'),
         path.join(programFiles86, 'Arduino', 'Arduino.exe'),
-      ], resolve, reject);
+      ].map(p => `"${p}"`);
+      resolveFirstValid(paths, resolve, reject);
       return;
     }
 
