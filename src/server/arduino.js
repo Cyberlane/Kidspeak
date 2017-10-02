@@ -14,9 +14,9 @@ const resolveFirstValid = (paths, resolve, reject) => {
   const [currentPath, ...rest] = paths;
   fs.access(currentPath, fs.constants.F_OK, (err) => {
     if (err === null) {
-      command = currentPath;
+      command = `"${currentPath}"`;
       log.info(`Arduino found: ${currentPath}`);
-      resolve(currentPath);
+      resolve(command);
     } else {
       resolveFirstValid(rest, resolve, reject);
     }
@@ -50,7 +50,7 @@ const getCommand = () =>
         path.join(programFiles, 'Arduino', 'Arduino.exe'),
         path.join(programFiles86, 'Arduino', 'Arduino_debug.exe'),
         path.join(programFiles86, 'Arduino', 'Arduino.exe'),
-      ].map(p => `"${p}"`);
+      ];
       resolveFirstValid(paths, resolve, reject);
       return;
     }

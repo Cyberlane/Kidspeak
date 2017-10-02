@@ -19,8 +19,8 @@ Kidspeak::Kidspeak(void)
 
 void Kidspeak::init(void)
 {
-  myOLED.setFont(SmallFont);
   myOLED.begin();
+  myOLED.setFont(SmallFont);
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(5, OUTPUT);
