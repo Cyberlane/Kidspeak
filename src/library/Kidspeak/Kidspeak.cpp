@@ -125,6 +125,11 @@ void Kidspeak::draw_text(String st, int x, int y)
   myOLED.print(st, x, y);
 }
 
+void Kidspeak::draw_number(long num, int x, int y, int length, char filler)
+{
+  myOLED.printNumI(num, x, y, length, filler);
+}
+
 void Kidspeak::draw_baby_groot(uint8_t x, uint8_t y)
 {
   myOLED.drawBitmap(x, y, (uint8_t*)Baby_Groot_Black, 35, 64);
