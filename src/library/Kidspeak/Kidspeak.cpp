@@ -120,6 +120,26 @@ void Kidspeak::draw_text(char *st, int x, int y)
   myOLED.print(st, x, y);
 }
 
+void Kidspeak::draw_rectangle(int x1, int y1, int x2, int y2)
+{
+  myOLED.drawRect(x1, y1, x2, y2);
+}
+
+void Kidspeak::clear_rectangle(int x1, int y1, int x2, int y2)
+{
+  myOLED.clrRect(x1, y1, x2, y2);
+}
+
+void Kidspeak::draw_line(int x1, int y1, int x2, int y2)
+{
+  myOLED.drawLine(x1, y1, x2, y2);
+}
+
+void Kidspeak::clear_line(int x1, int y1, int x2, int y2)
+{
+  myOLED.clrLine(x1, y1, x2, y2);
+}
+
 void Kidspeak::draw_text(String st, int x, int y)
 {
   myOLED.print(st, x, y);
