@@ -68,6 +68,10 @@ class Kidspeak
     void draw_invert(bool mode);
     void draw_text(char *st, int x, int y);
     void draw_text(String st, int x, int y);
+    void draw_rectangle(int x1, int y1, int x2, int y2);
+    void clear_rectangle(int x1, int y1, int x2, int y2);
+    void draw_line(int x1, int y1, int x2, int y2);
+    void clear_line(int x1, int y1, int x2, int y2);
     void draw_number(long num, int x, int y, int length=0, char filler=' ');
     void draw_baby_groot(uint8_t x, uint8_t y);
     void draw_bat(uint8_t x, uint8_t y);
