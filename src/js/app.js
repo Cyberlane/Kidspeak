@@ -118,7 +118,7 @@ function init() {
   window.addEventListener('resize', onresize, false);
 
   var toolbox = document.getElementById('toolbox');
-  //var toolbox = buildtoolBox();
+
   Blockly.inject(document.getElementById('content_blocks'), {
     grid: {
       spacing: 25,
@@ -126,7 +126,6 @@ function init() {
       colour: '#ccc',
       snap: true
     },
-    //media: 'media/',
     media: filepath.media,
     toolbox: toolbox
   });
