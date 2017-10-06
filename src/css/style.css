@@ -169,6 +169,14 @@ body .blocklyToolboxDiv .blocklyTreeRoot > div:nth-child(2) > div:nth-child(11) 
 body .blocklyToolboxDiv .blocklyTreeRoot > div:nth-child(2) > div:nth-child(11):hover {
   background-color: #b77c9a;
 }
+body .blocklyToolboxDiv .blocklyTreeRoot > div:nth-child(2) > div:nth-child(13) {
+  background-color: #5b7aa5;
+  border-top: 2px #9dafc9 solid;
+  border-bottom: 2px #374963 solid;
+}
+body .blocklyToolboxDiv .blocklyTreeRoot > div:nth-child(2) > div:nth-child(13):hover {
+  background-color: #7c95b7;
+}
 body .blocklyToolboxDiv .blocklyTreeSeparator {
   border-color: #8cc63c;
 }
