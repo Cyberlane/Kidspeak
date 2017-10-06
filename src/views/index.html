@@ -124,11 +124,13 @@ ipcRenderer.on('message', function(event, text) {
     <category name="Text">
         <block type="text"></block>
         <block type="text_commentout"></block>
+    </category>
+    <category name="Variables" custom="VARIABLE"></category>
+    <category name="Arrays">
         <block type="lists_create_empty"></block>
         <block type="lists_getIndex"></block>
         <block type="lists_setIndex"></block>
     </category>
-    <category name="Variables" custom="VARIABLE"></category>
     <category name="Functions" custom="PROCEDURE"></category>
     <sep></sep>
     <category name="Input/Output">
@@ -223,6 +225,10 @@ ipcRenderer.on('message', function(event, text) {
         <block type="oled_invert"></block>
         <block type="oled_print"></block>
         <block type="oled_print_number"></block>
+        <block type="oled_draw_rectangle"></block>
+        <block type="oled_clear_rectangle"></block>
+        <block type="oled_draw_line"></block>
+        <block type="oled_clear_line"></block>
         <block type="oled_image_kidspeak"></block>
         <block type="oled_image_tretton37"></block>
         <block type="oled_image_baby_groot"></block>

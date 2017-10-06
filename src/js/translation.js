@@ -102,16 +102,17 @@ var translation = (function () {
       {id: ":3.label", key: Blockly.Msg.CUSTOM_MATH},
       {id: ":4.label", key: Blockly.Msg.CUSTOM_TEXT},
       {id: ":5.label", key: Blockly.Msg.CUSTOM_VARIABLES},
-      {id: ":6.label", key: Blockly.Msg.CUSTOM_FUNCTIONS},
-      {id: ":8.label", key: Blockly.Msg.CUSTOM_INPUT_OUTPUT},
-      {id: ":9.label", key: Blockly.Msg.CUSTOM_DIGITAL},
-      {id: ":a.label", key: Blockly.Msg.CUSTOM_ANALOG},
-      {id: ":b.label", key: Blockly.Msg.CUSTOM_SERIAL},
-      {id: ":c.label", key: Blockly.Msg.CUSTOM_TONE},
-      {id: ":d.label", key: Blockly.Msg.CUSTOM_LED },
-      {id: ":e.label", key: Blockly.Msg.CUSTOM_BUTTONS},
-      {id: ":f.label", key: Blockly.Msg.CUSTOM_TUNES},
-      {id: ":g.label", key: Blockly.Msg.CUSTOM_OLED}
+      {id: ":6.label", key: Blockly.Msg.CUSTOM_ARRAYS },
+      {id: ":7.label", key: Blockly.Msg.CUSTOM_FUNCTIONS},
+      {id: ":9.label", key: Blockly.Msg.CUSTOM_INPUT_OUTPUT},
+      {id: ":a.label", key: Blockly.Msg.CUSTOM_DIGITAL},
+      {id: ":b.label", key: Blockly.Msg.CUSTOM_ANALOG},
+      {id: ":c.label", key: Blockly.Msg.CUSTOM_SERIAL},
+      {id: ":d.label", key: Blockly.Msg.CUSTOM_TONE},
+      {id: ":e.label", key: Blockly.Msg.CUSTOM_LED },
+      {id: ":f.label", key: Blockly.Msg.CUSTOM_BUTTONS},
+      {id: ":g.label", key: Blockly.Msg.CUSTOM_TUNES},
+      {id: ":h.label", key: Blockly.Msg.CUSTOM_OLED}
     ];
 
     table.forEach(function (t) {
