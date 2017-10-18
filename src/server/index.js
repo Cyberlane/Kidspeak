@@ -3,11 +3,12 @@ import { app, dialog } from 'electron';
 import { init, redirect } from './electron-app';
 import webServer from './web-server';
 import setup from './setup';
+import { version } from '../../package.json';
 import './electron-prompt';
 
 Promise.all([webServer, init, setup])
   .then(([port]) => {
-    redirect(`http://localhost:${port}`);
+    redirect(`http://localhost:${port}#${version}`);
   })
   .catch((e) => {
     log.error(e);
