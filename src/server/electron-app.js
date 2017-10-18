@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow } from 'electron'; // eslint-disable-line import/no-extraneous-dependencies
 import log from 'electron-log';
 import path from 'path';
 

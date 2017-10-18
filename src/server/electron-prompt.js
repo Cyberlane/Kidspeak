@@ -4,7 +4,7 @@ import { BrowserWindow, ipcMain } from 'electron';
 let promptResponse = null;
 ipcMain.on('prompt', (eventRet, args) => {
   promptResponse = null;
-  const widthDialog = (length) => length * 9;
+  const widthDialog = length => length * 9;
   const promptWindow = new BrowserWindow({
     minWidth: 150,
     width: widthDialog(args.title.length),

@@ -29,7 +29,7 @@ const setup = new Promise((resolve, reject) => {
       .then(() => resolve())
       .catch(reject);
     })
-    .catch(e => {
+    .catch((e) => {
       log.error(e);
       reject('Could not find library path');
     });

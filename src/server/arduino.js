@@ -64,9 +64,8 @@ const getPid = ({ productId, pnpId }) => {
   }
   if (pnpId) {
     try {
-      return '0x' + /PID_\d*/.exec(pnpId)[0].substr(4);
-    }
-    catch (err) {
+      return `0x${/PID_\d*/.exec(pnpId)[0].substr(4)}`;
+    } catch (err) {
       return null;
     }
   }
@@ -84,7 +83,7 @@ const getPortName = () =>
         return;
       }
       const [port] = ports
-        .filter(p => {
+        .filter((p) => {
           const pid = getPid(p);
           if (pid === null) return false;
           return nanoPidList.indexOf(parseInt(pid, 16)) !== -1;
