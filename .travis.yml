@@ -1,0 +1,11 @@
+os:
+  - linux
+  - osx
+language: node_js
+node_js:
+  - "7"
+install:
+  - npm i
+  - npm rum rebuild
+script:
+  - npm run publish

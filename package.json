@@ -1,6 +1,6 @@
 {
   "name": "kidspeak",
-  "version": "1.4.7",
+  "version": "1.4.7-test1",
   "description": "KidSpeak block programming app",
   "main": "src/index.js",
   "scripts": {
