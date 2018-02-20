@@ -6,6 +6,6 @@ node_js:
   - "7"
 install:
   - npm i
-  - npm rum rebuild
+  - npm run rebuild
 script:
   - npm run publish
