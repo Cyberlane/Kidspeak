@@ -1,0 +1,18 @@
+environment:
+  nodejs_version: "8.6.0"
+install:
+  - ps: $env:package_version = (Get-Content -Raw -Path package.json | ConvertFrom-Json).version
+  - ps: Install-Product node $env:nodejs_version
+  - npm i -g npm@5.4.2
+  - npm i
+  - npm run rebuild
+test_script:
+  - npm run make
+deploy:
+  release: $env:package_version
+  provider: GitHub
+  auth_token:
+    secure: $GH_TOKEN
+  artifact: out/make/*
+  draft: true
+  prerelease: false
