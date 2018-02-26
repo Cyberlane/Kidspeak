@@ -11,4 +11,11 @@ install:
   - npm i
   - npm run rebuild
 script:
-  - npm run publish
+  - npm run make
+deploy:
+  provider: releases
+  api_key: $GH_TOKEN
+  file: out/make/*.zip
+  skip_cleanout: true
+  on:
+    tags: true
