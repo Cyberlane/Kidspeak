@@ -5,7 +5,7 @@ addons:
   apt:
     packages:
       - fakeroot
-      - rpmbuild
+      - rpm
 sudo: required
 language: node_js
 node_js:
