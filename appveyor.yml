@@ -8,6 +8,7 @@ install:
   - npm run rebuild
 test_script:
   - npm run make
+build: off
 deploy:
   release: $env:package_version
   provider: GitHub
