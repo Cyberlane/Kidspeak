@@ -13,7 +13,7 @@ deploy:
   release: $env:package_version
   provider: GitHub
   auth_token:
-    secure: $GH_TOKEN
+    secure: $env:GH_TOKEN
   artifact: out/make/*
   draft: true
   prerelease: false
