@@ -1,6 +1,10 @@
 os:
   - linux
   - osx
+addons:
+  apt:
+    packages:
+      - fakeroot
 sudo: required
 language: node_js
 node_js:
