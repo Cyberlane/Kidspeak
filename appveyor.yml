@@ -10,7 +10,7 @@ test_script:
   - npm run make
 build: off
 deploy:
-  release: $env:package_version
+  release: $(package_version)
   provider: GitHub
   auth_token:
     secure: tMzsqBF5tDxYg/MeL1Pli+OS2VAvkrnYKPf/uMJ4N6MYf55WCGdEBMw64/qE1NS6
