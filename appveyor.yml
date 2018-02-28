@@ -14,6 +14,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: tMzsqBF5tDxYg/MeL1Pli+OS2VAvkrnYKPf/uMJ4N6MYf55WCGdEBMw64/qE1NS6
-  artifact: out\make\**\*.*
+  artifacts:
+    - path: 'out\make\**\*.*'
   draft: true
   prerelease: false
