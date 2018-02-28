@@ -1,5 +1,11 @@
 ![Kidspeak logo](https://leetspeak.se/2016/images/kidspeak/logo.png)
 
+Windows Build
+!(windows build status)[https://ci.appveyor.com/api/projects/status/github/kidspeak]
+
+Linux and Mac Build
+!(linux and mac build status)[https://travis-ci.org/Cyberlane/Kidspeak.svg?branch=electron]
+
 ### Intro
 
 Kidspeak is a `track` or a mini conference which was originally held inside Leetspeak 2016, especially designed for children. It allows parents to bring their child to Leetspeak and enjoy the glorious sessions while their child is learning and in the breaks they can check up on the progress of their children. This year we aim for children between 7 and 17 with no previous experience with programming needed.
