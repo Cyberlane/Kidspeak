@@ -8,7 +8,6 @@
     "less": "node_modules/.bin/lessc css/style.less css/style.css",
     "rebuild": "electron-rebuild -f -w serialport",
     "package": "electron-forge package",
-    "make": "electron-forge make",
     "publish": "electron-forge publish",
     "make": "electron-forge make"
   },
