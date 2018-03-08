@@ -12,9 +12,13 @@
 
 OLED myOLED(SDA, SCL, 8);
 extern uint8_t SmallFont[];
+uint8_t commonAnode = 0;
 
 Kidspeak::Kidspeak(void)
 {
+  if (digitalRead(3)) {
+    commonAnode = 1;
+  }
 }
 
 void Kidspeak::init(void)
@@ -22,19 +26,46 @@ void Kidspeak::init(void)
   myOLED.begin();
   myOLED.setFont(SmallFont);
   pinMode(2, OUTPUT);
+  pinMode(3, INPUT);
+
   pinMode(3, OUTPUT);
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);
   pinMode(9, OUTPUT);
   pinMode(10, OUTPUT);
   pinMode(11, OUTPUT);
+
+  if (commonAnode == 1) {
+    analogWrite(3, 255);
+    analogWrite(5, 255);
+    analogWrite(6, 255);
+    analogWrite(9, 255);
+    analogWrite(10, 255);
+    analogWrite(11, 255);
+  } else {
+    analogWrite(3, 0);
+    analogWrite(5, 0);
+    analogWrite(6, 0);
+    analogWrite(9, 0);
+    analogWrite(10, 0);
+    analogWrite(11, 0);
+  }
 }
 
 void Kidspeak::rgb_set_color(uint8_t redPin, uint8_t greenPin, uint8_t bluePin, uint8_t red, uint8_t green, uint8_t blue)
 {
-  analogWrite(redPin, red);
-  analogWrite(greenPin, green);
-  analogWrite(bluePin, blue);
+  if (commonAnode == 1) {
+    red = 255 - red;
+    green = 255 - green;
+    blue = 255 - blue;
+    analogWrite(redPin, green);
+    analogWrite(greenPin, blue);
+    analogWrite(bluePin, red);
+  } else {
+    analogWrite(redPin, red);
+    analogWrite(greenPin, green);
+    analogWrite(bluePin, blue);
+  }
 }
 
 void Kidspeak::play_tune(uint8_t *currentTune)
