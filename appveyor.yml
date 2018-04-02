@@ -4,6 +4,7 @@ install:
   - ps: $env:package_version = (Get-Content -Raw -Path package.json | ConvertFrom-Json).version
   - ps: Install-Product node $env:nodejs_version
   - npm i -g npm@5.4.2
+  - npm cache clean --force
   - npm i
   - npm run rebuild
 test_script:
