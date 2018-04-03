@@ -19,7 +19,6 @@ script:
   - npm run make
 deploy:
   on:
-    branch: electron
     tags: true
   provider: releases
   api_key: $GH_TOKEN
