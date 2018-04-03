@@ -13,6 +13,9 @@ build: off
 artifacts:
   - path: 'out\make\**\*.*'
 deploy:
+  on:
+    branch: electron
+    appveyor_repo_tag: true
   release: $(package_version)
   provider: GitHub
   auth_token:
