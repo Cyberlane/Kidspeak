@@ -1,10 +1,10 @@
 ![Kidspeak logo](https://leetspeak.se/2016/images/kidspeak/logo.png)
 
 Windows Build
-!(windows build status)[https://ci.appveyor.com/api/projects/status/github/kidspeak]
+![windows build status](https://ci.appveyor.com/api/projects/status/github/Cyberlane/Kidspeak?branch=electron&svg=true)
 
 Linux and Mac Build
-!(linux and mac build status)[https://travis-ci.org/Cyberlane/Kidspeak.svg?branch=electron]
+![linux and mac build status](https://travis-ci.org/Cyberlane/Kidspeak.svg?branch=electron)
 
 ### Intro
 

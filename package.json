@@ -1,6 +1,6 @@
 {
   "name": "kidspeak",
-  "version": "1.4.7-test1",
+  "version": "1.4.8",
   "description": "KidSpeak block programming app",
   "main": "src/index.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "less": "node_modules/.bin/lessc css/style.less css/style.css",
     "rebuild": "electron-rebuild -f -w serialport",
     "package": "electron-forge package",
-    "publish": "electron-forge publish",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
   "repository": {
     "type": "git",

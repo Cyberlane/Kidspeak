@@ -3,8 +3,9 @@ environment:
 install:
   - ps: $env:package_version = (Get-Content -Raw -Path package.json | ConvertFrom-Json).version
   - ps: Install-Product node $env:nodejs_version
-  - npm i -g npm@5.4.2
-  - npm i
+  - npm i -g npm@5.8.0
+  - npm cache clean --force
+  - npm ci
   - npm run rebuild
 test_script:
   - npm run make
@@ -12,6 +13,9 @@ build: off
 artifacts:
   - path: 'out\make\**\*.*'
 deploy:
+  on:
+    branch: electron
+    appveyor_repo_tag: true
   release: $(package_version)
   provider: GitHub
   auth_token:
