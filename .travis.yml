@@ -20,6 +20,7 @@ script:
 deploy:
   provider: releases
   api_key: $GH_TOKEN
+  file_glob: true
   file: out/make/*
   skip_cleanout: true
   on:
