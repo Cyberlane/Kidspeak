@@ -22,6 +22,6 @@ deploy:
   api_key: $GH_TOKEN
   file_glob: true
   file: out/make/**/*
-  skip_cleanout: true
+  skip_cleanup: true
   on:
     tags: true
