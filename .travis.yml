@@ -21,7 +21,7 @@ deploy:
   provider: releases
   api_key: $GH_TOKEN
   file_glob: true
-  file: out/make/*
+  file: out/make/**/*
   skip_cleanout: true
   on:
     tags: true
