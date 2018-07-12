@@ -24,9 +24,9 @@ Kidspeak cannot be used without my explicit permission. Please contact me at jus
 
 #### Previous
 
-[LeetSpeak 2016](https://leetspeak/2016)
-[Kidspeak in Lund 2016](https://kidspeak.se)
-[LeetSpeak 2017](https://leetspeak/2017)
+* [LeetSpeak 2016](https://leetspeak/2016)
+* [Kidspeak in Lund 2016](https://kidspeak.se)
+* [LeetSpeak 2017](https://leetspeak/2017)
 
 #### Upcoming
 
