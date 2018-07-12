@@ -45,4 +45,4 @@ The code is based off of the Google Blockly library, but has been modified exten
 - Justin Nel ( Main developer )
 - Magnus Ferm ( UI styling, Swedish translations, Testing )
 - Adam Brunette ( Block ideas, Images for OLED, Testing )
-- Andreas Voigt ( Testing )
+- Andreas Voigt ( Testing, Bug fixes )
