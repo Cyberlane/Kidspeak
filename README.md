@@ -8,28 +8,41 @@ Linux and Mac Build
 
 ### Intro
 
-Kidspeak is a `track` or a mini conference which was originally held inside Leetspeak 2016, especially designed for children. It allows parents to bring their child to Leetspeak and enjoy the glorious sessions while their child is learning and in the breaks they can check up on the progress of their children. This year we aim for children between 7 and 17 with no previous experience with programming needed.
+Kidspeak is a `track` or a mini conference which I created especially designed for young ones. It allows parents to bring their young ones to a conference and enjoy the glorious sessions while their young ones are learning and in the breaks they can check up on the progress of their children.
 
-Kidspeak encourages children to get into technology at an early age. In order for each child to get proper care and mentoring we are only running a very small group of children - places are very limited.
+The event is suitable for ages 7 to 17 with no previous experience with programming needed.
 
-Kidspeak was in the same venue as Leetspeak just a floor down from the main conference.
+Kidspeak encourages people to get into technology at an early age. In order for each attendee to get proper care and mentoring we recommend only running the event with a smaller group.
 
 It was a blast, and we look forward to seeing you at future events!
 
+### Usage
+
+Kidspeak cannot be used without my explicit permission. Please contact me at justin@cyber-lane.com if you are interested in using it at your event.
+
+### Events
+
+## Previous
+
+[LeetSpeak 2016](https://leetspeak/2016)
+[Kidspeak in Lund 2016](https://kidspeak.se)
+[LeetSpeak 2017](https://leetspeak/2017)
+
+## Upcoming
+
+Currently nobody has contacted me for usage of any upcoming events, but once they do I will advertise them here.
+
 ### Websites
 
-There are two official websites for Kidspeak, but don't worry, this is good thing!
-
-https://kidspeak.se/ is the events website, owned and managed by [tretton37](https://tretton37.com). This will only be updated when there are events being organised.
-
-https://kidspeak.code-blocks.com is the code and documentation website, owned and managed by [Justin Nel](https://cyber-lane.com). I will continue to keep this one up to date as new code is made, or anything about the platform itself changes.
+https://kidspeak.code-blocks.com is the official website, owned and managed by [Justin Nel](https://cyber-lane.com). I will continue to keep this up to date as new code is made or anything about the platform itself changes.
 
 ### Code
 
-Code is based off of the Google Blockly library, but has been modified extensively for specific purpose of the Kidspeak event.
+The code is based off of the Google Blockly library, but has been modified extensively for specific purpose of the Kidspeak event.
 
 ### Contributors
 
 - Justin Nel ( Main developer )
 - Magnus Ferm ( UI styling, Swedish translations, Testing )
 - Adam Brunette ( Block ideas, Images for OLED, Testing )
+- Andreas Voigt ( Testing )
